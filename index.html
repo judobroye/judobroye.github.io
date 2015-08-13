@@ -1,46 +1,9 @@
 ---
 layout: default
+event: true
+slider: true
 ---
 
-            <div class="slider">
-              <ul class="items">
-                 <li><img src="images/slider-1.jpg" alt="">
-                    <div class="banner">
-                        <p class="font-1">Nos<span style="color:white;"> cours</span></p>
-                        <p class="font-2">Le mardi, le mercredi et le vendredi, venez fouler le tatami et vous entraîner!</p>
-                        <a href="trainings.html">Plus d'information ici</a>
-                    </div>
-                </li>
-                <li><img src="images/slider-2.jpg" alt="">
-                    <div class="banner">
-                        <p class="font-1">Dernières<span style="color:white;"> nouvelles</span></p>
-                        <p class="font-2">La vie du judo club racontée par ses membres</p>
-                        <a href="posts.html">Plus d'information ici</a>
-                    </div>
-                </li>
-                <li><img src="images/slider-3.jpg" alt="">
-                    <div class="banner">
-                        <p class="font-1">Infos<span style="color:white;">pratiques</span></p>
-                        <p class="font-2">Notre Dojo se trouve à Corcelles-près-Payerne, route de la Freybonnaz 3...</p>
-                        <a href="contacts.html">Plus d'informations ici</a>
-                    </div>
-                </li>
-              </ul>
-              <div class="pagination">
-                  <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                  </ul>
-              </div>  
-            </div>
-          </div>	
-
-          <div class="grid_12 top-1">
-
-          	<div class="box-shadow">
-            	<div class="wrap block-2">
-		<!-- NEWS -->
                     <div class="col-1">
                     	<h2 class="p3"><span class="color-1">Dernières</span> nouvelles</h2>
 		        {% for post in site.posts | sort | limit:3 %}
@@ -54,7 +17,4 @@ layout: default
                         </div>
 
 			{% endfor %}
-                    </div>
-		    {% include events.html %}
-                </div>
-            </div>
+			</div>
