@@ -10,17 +10,18 @@ layout: default
             	<div class="wrap block-2">
 		<!-- NEWS -->
                     <div class="col-1">
-                    	<h2 class="p3">les News<span class="color-1"> du club</span></h2>
-  {% for post in site.posts %}
-    <article class="post">    
-      
-      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> ({{ (post.date | date: "%d/%m/%Y" }}) </h3>
+                    	<h2 class="p3"><span class="color-1">Dernières</span> nouvelles</h2>
+		        {% for post in site.posts | sort %}
+                        <div class="wrap box-1">
+                            <div class="extra-wrap">
+			    <a href="{{ site.baseurl }}{{ post.url }}">
+                            <img src="{{site.baseurl}}/{{ post.image }}" alt="" class="img-border img-indent" width="100px">
+			    <p class="p2"><strong>{{ post.title }}</strong></p></a>
+                                <p>{{ post.content | truncatewords:10 }} </p>
+                            </div>
+                        </div>
 
-      <div class="entry">
-        {{ post.content | truncatewords:10}} <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">en savoir plus</a>
-      </div>
-    </article>
-  {% endfor %}
+			{% endfor %}
                     </div>
 		    {% include events.html %}
                 </div>

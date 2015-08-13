@@ -43,7 +43,7 @@ layout: default
 		<!-- NEWS -->
                     <div class="col-1">
                     	<h2 class="p3"><span class="color-1">Dernières</span> nouvelles</h2>
-		        {% for post in site.posts %}
+		        {% for post in site.posts | sort | limit:3 %}
                         <div class="wrap box-1">
                             <div class="extra-wrap">
 			    <a href="{{ site.baseurl }}{{ post.url }}">
