@@ -1,0 +1,20 @@
+- name: technique 1
+  jour: mardi
+  heure: 18:15 - 19:15
+  description: Pour les enfants dès 5 ans......
+
+- name: technique 2
+  jour: mardi
+  heure: 19:15 - 20:15
+  description: Pour les enfants dès 8 ans......
+  
+- name: technique 3
+  jour: mercredi
+  heure: 18:30 - 19:30
+  description: Pour les enfants dès 13 ans......
+
+- name: technique 4
+  jour: vendredi
+  heure: 18:30 - 20:00
+  image: 
+  description: Pour les enfants dès 13 ans......

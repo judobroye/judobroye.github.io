@@ -1,0 +1,10 @@
+<div id="gallery">
+  {% for image in include.param %}
+<img src="{{site.baseurl}}/{{image}}" width="80%" height="*" />
+  {% endfor %}
+</div>
+<script src="{{site.baseurl}}/js/ideal-image-slider.js"></script>
+<script>
+var slider = new IdealImageSlider.Slider('#gallery');
+ slider.start();
+</script>

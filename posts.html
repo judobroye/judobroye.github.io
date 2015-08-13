@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+          </div>	
+
+          <div class="grid_12 top-1">
+
+          	<div class="box-shadow">
+            	<div class="wrap block-2">
+		<!-- NEWS -->
+                    <div class="col-1">
+                    	<h2 class="p3">les News<span class="color-1"> du club</span></h2>
+  {% for post in site.posts %}
+    <article class="post">    
+      
+      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> ({{ (post.date | date: "%d/%m/%Y" }}) </h3>
+
+      <div class="entry">
+        {{ post.content | truncatewords:10}} <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">en savoir plus</a>
+      </div>
+    </article>
+  {% endfor %}
+                    </div>
+		    {% include events.html %}
+                </div>
+            </div>

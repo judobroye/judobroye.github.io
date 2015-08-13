@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+          </div>	
+
+          <div class="grid_12 top-1">
+
+          	<div class="box-shadow">
+            	<div class="wrap block-2">
+
+                    <div class="col-3">
+                    	<h2><span class="color-1">Nous</span> trouver</h2>
+                        <div class="map img-border">
+			  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2729.4006422485368!2d6.9604788!3d46.8358025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e76b047cfd3d5%3A0x769a7b45a0e4c371!2sRoute+de+Freybonnaz+3%2C+1562+Corcelles-pr%C3%A8s-Payerne!5e0!3m2!1sfr!2sch!4v1439381515005" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <dl>
+                            <dt class="color-1"><strong>route de Freybonnaz 3, Corcelles-près-Payerne </strong></dt>
+                            <dd><span>Téléphone:</span><a href="tel:+41793118381" class="number" rel="nofollow">079 311 83 81</a></dd>
+                            <dd><span>E-mail:</span><a href="mailto:judoclubbroye@gmail.com" class="link">judoclubbroye@gmail.com</a></dd>
+                        </dl>
+                    </div>
+                    <div class="col-4">
+                        <h2 class="p3"><span class="color-1">Personnes</span> de contact</h2>
+                        <table>
+		        {% for member in site.data.members %}
+			<tr>
+                       	    <td>{{ member.titre }}</td>
+			    <td width="50px">&nbsp;</td> 
+			    <td width="50px">:</td> 
+			    <td>{{ member.nom }} </td>
+			</tr>    
+			{% endfor %}
+                        </table>
+
+                    </div>
+		    <div>
+                    	<h2><span class="color-1">Informations</span> pratiques</h2>
+			<table>
+		        {% for info in site.data.infos %}
+			<tr>
+			<td>{{info.nom}}</td>
+			    <td width="50px">&nbsp;</td> 
+			<td>{{info.valeur}}</td>
+			</tr>
+			{% endfor %}
+			</table>
+		    </div>
+	            <div class="clear"></div>
+
+                </div>
+            </div>

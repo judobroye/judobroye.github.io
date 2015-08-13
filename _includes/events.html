@@ -1,0 +1,10 @@
+
+                    <div class="col-2">
+                        <h2 class="p3"><span class="color-1">A</span> venir</h2>
+                        <ul class="list-1">
+			{% assign events = site.data.events | sort: 'date' %}
+		        {% for event in events limit:5 %}
+                       	    <li>{{ event.date }} : {{ event.quoi }} </li>
+			{% endfor %}
+                        </ul>
+                    </div>

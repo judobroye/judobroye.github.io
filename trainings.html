@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+</div>	
+
+<div class="grid_12 top-1">
+
+     <div class="box-shadow">
+ 	<div class="wrap block-2">
+     <!-- NEWS -->
+         <div class="col-1">
+         	<h2 class="p3"><span class="color-1">Entraînements</span></h2>
+             {% for training in site.data.trainings %}
+             <div class="wrap box-1">
+                 <img src="images/{{ training.image }}" alt="" class="img-border img-indent">
+                 <div class="extra-wrap">
+     	    <p class="p2"><strong>{{ training.name }}</strong> </p> 
+     	    <p>{{ training.jour }}, {{training.heure }}
+     	    <p>{{ training.description }}</p>
+     	    </div>
+             </div>
+
+     	{% endfor %}
+         </div>
+         {% include events.html %}
+     </div>
+</div>
